@@ -145,11 +145,11 @@ header {
 #on-btn,
 .btn-img {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   text-decoration: none;
   transition: all 1s ease-in-out;
-  background-color: var(--white);
+  background-color: #ddd;
 }
 
 #on-btn:hover,
