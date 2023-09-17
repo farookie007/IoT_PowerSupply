@@ -2,10 +2,10 @@
 
 :root {
   --light-green: rgb(72, 246, 72);
-  --light-blue: hsl(207, 100%, 98%);
-  --regular-blue: hsl(204, 70%, 53%);
+  --light-theme-color: hsl(20, 100%, 98%);
+  --regular-theme-color: hsl(20, 70%, 53%);
   /* --bg-color: #fff; */
-  --bg-color: hsl(207, 100%, 99%);
+  --bg-color: hsl(20, 100%, 99%);
 
   /* --bg-color: #f0f0f0; */
   --greyy: hsla(0, 0%, 50%, 1);
@@ -32,7 +32,7 @@ body {
 }
 
 #wrapper {
-  background-color: var(--light-blue);
+  background-color: var(--light-theme-color);
   background-color: var(--bg-color);
   /* border: 1px solid var(--font-color); */
   border-radius: 10px;
@@ -61,19 +61,19 @@ input {
   box-sizing: border-box;
 }
 input:focus {
-  outline-color: rgb(161, 200, 253);
+  outline-color: hsl(20, 96%, 81%);
 }
 
 a:focus,
 button:focus {
-  outline-color: rgb(80, 80, 80);
+  outline-color: hsl(0, 0%, 51%);
 }
 
 a {
   padding: 0;
   margin: 0;
   text-decoration: none;
-  color: var(--regular-blue);
+  color: var(--regular-theme-color);
 }
 /* messages alert */
 #flash-msg {
@@ -126,7 +126,7 @@ header {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: var(--light-blue);
+  background-color: var(--light-theme-color);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -201,7 +201,8 @@ header {
   border-radius: 4px;
   font-size: 1rem;
   height: 2.5rem;
-  background-color: var(--regular-blue);
+  line-height: 0;
+  background-color: var(--regular-theme-color);
   color: var(--white);
   border: none;
   transition: background-color 0.3s;
@@ -209,7 +210,7 @@ header {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #2185d0;
+  background-color: hsl(20, 73%, 47%);
 }
 
 .foot {
