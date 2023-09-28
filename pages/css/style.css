@@ -1,0 +1,601 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@font-face {
+  font-family: "Noway";
+  src: url("../fonts/Noway/noway-regular-webfont.ttf");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu/Ubuntu-Bold.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-BoldItalic.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-Italic.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-Light.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-LightItalic.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-Medium.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-MediumItalic.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+:root {
+  --font-fam: "Quicksand", "Ubuntu";
+  /* dark theme params */
+  --background-color: hsla(220, 26%, 10%, 1);
+  --link-color: hsla(204, 57%, 90%, 0.9);
+  --font-color: hsla(0, 0%, 100%, 1);
+  --shade: hsla(220, 26%, 13%, 1);
+  --btn-color: hsla(204, 57%, 30%, 0.9);
+  --btn-hover: hsla(204, 57%, 20%, 0.9);
+  /* light theme params */
+}
+/* :root {
+  --font-fam: "Quicksand", "Ubuntu";
+  --background-color: hsla(220, 26%, 7%, 1);
+  --link-color: hsla(204, 57%, 90%, 0.9);
+  --font-color: hsla(0, 0%, 100%, 1);
+  --shade: hsla(220, 26%, 8%, 1);
+  --btn-color: hsla(204, 57%, 30%, 0.9);
+  --btn-hover: hsla(204, 57%, 20%, 0.9);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* border: 1px dotted hsl(50, 20%, 26%); */
+}
+
+/* native tags */
+html {
+  font-family: var(--font-fam);
+  font-size: 13px;
+}
+#wrapper {
+  position: relative;
+  width: 1512px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 0 25px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+header {
+  width: 100%;
+  top: 0;
+  padding: 1rem 1rem;
+  line-height: 2rem;
+}
+footer {
+  margin-bottom: 5rem;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  /* font-family: "Tahoma", "Ubuntu"; */
+}
+p {
+  line-height: 1.8rem;
+}
+img {
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  height: auto;
+}
+hr {
+  width: 100%;
+  height: 5px;
+  border: none;
+  background-color: var(--shade);
+  margin: 2rem 0;
+}
+
+/* id */
+#desktop-nav {
+  width: 50%;
+}
+#desktop-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+#skills .card img {
+  width: auto;
+  height: 70px;
+}
+
+#projects .name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+#projects .card {
+  margin: 2.5rem 0;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: var(--shade);
+  box-shadow: 0 2px 4px var(--shade);
+}
+.card-photo {
+  height: fit-content;
+  margin: auto;
+}
+#projects .card-photo img {
+  width: auto;
+  height: 10rem;
+}
+
+#projects .about-me {
+  height: fit-content;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+#projects .card-desc {
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  width: 100%;
+  text-align: left;
+}
+#projects .layover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+#projects .layover:hover,
+#projects .layoverr:focus {
+  opacity: 1;
+}
+
+#projects #share-btn {
+  position: relative;
+  height: 20%;
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#cards-container {
+  justify-content: center;
+}
+
+#bio {
+  margin-top: 7rem;
+  width: 100%;
+  height: 80vh;
+}
+#bio-data {
+  text-align: center;
+}
+#desc > * {
+  margin: 1rem auto;
+  height: fit-content;
+}
+.about-me {
+  width: 70%;
+}
+.socials {
+  width: 30%;
+  margin: auto;
+}
+
+#bio-name {
+  font-family: "Tahoma";
+  font-size: 3rem;
+  font-weight: 800;
+  height: fit-content;
+}
+
+#page-title {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* class */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.relative {
+  position: relative;
+}
+
+
+.avatar {
+  position: relative;
+  border-radius: 50%;
+}
+
+.mobile {
+  display: none;
+}
+.hamburger-menu,
+.overlay {
+  display: none;
+}
+
+.title {
+  font-family: "Tahoma";
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.section {
+  width: 950px;
+  margin: 7rem auto;
+}
+.shield {
+  /* background-color: var(--font-color);
+  color: var(--background-color); */
+  border-radius: 10px;
+  padding: 0.1rem 0.5rem;
+  width: fit-content;
+}
+.bold {
+  font-weight: 600;
+}
+
+.icon {
+  width: 1.5rem;
+  height: auto;
+}
+
+.c-prgm {
+  font-family: Tahoma;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.card {
+  padding: 1rem 3rem;
+  text-align: center;
+  margin: 1.2rem;
+}
+
+.tags {
+  width: fit-content;
+}
+.tags img {
+  margin-right: 1rem;
+}
+.txt-center {
+  text-align: center;
+}
+
+/* Forms */
+#submit-btn {
+  margin-top: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+#hire-me {
+  display: inline-block;
+  color: var(--font-color);
+  font-weight: 600;
+  height: unset;
+  width: 8rem;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid var(--btn-hover);
+  transition: background-color 0.3s;
+}
+
+.btn {
+  font-family: var(--font-fam);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--font-color);
+  background-color: var(--btn-color);
+  border-radius: 4px;
+  height: 2.5rem;
+  line-height: 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#hire-me:hover,
+#hire-me:focus,
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-hover);
+}
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input:focus {
+  outline-color: hsl(20, 96%, 81%);
+}
+
+a:focus,
+button:focus {
+  outline-color: hsl(0, 0%, 51%);
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--shade);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 1512px) {
+  #wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    margin-bottom: 100px;
+    background-color: var(--background-color);
+    z-index: 111;
+  }
+  main {
+    margin-top: 5rem;
+  }
+  #page-title {
+    display: none;
+  }
+  #hire {
+    text-align: left;
+  }
+  #bio {
+    margin-top: unset;
+    width: 100%;
+    height: fit-content;
+  }
+  #desktop-nav {
+    display: none;
+  }
+  #desc .about-me {
+    width: 95%;
+    margin: unset;
+  }
+  #bio-data {
+    text-align: unset;
+    justify-content: space-around;
+  }
+
+  #bio-name {
+    margin: auto 0;
+  }
+  #skills .card img {
+    height: 50px;
+  }
+  .section {
+    width: 100%;
+  }
+  .mobile {
+    display: unset;
+  }
+  .desktop {
+    display: none;
+  }
+  .m-col {
+    flex-direction: column;
+    display: flex;
+  }
+  .m-col-rev {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .m-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .m-row-rev {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .socials {
+    width: 40%;
+    margin: 0;
+  }
+  .avatar {
+    position: relative;
+    height: 17rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  .card {
+    padding: 1rem 1.2rem;
+  }
+
+  /* hamburger menu */
+  .hamburger-menu {
+    margin: auto 0;
+    display: block;
+    height: 100%;
+    width: 1.5rem;
+    position: relative;
+    left: 93%;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 111;
+  }
+
+  .ham-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--font-color);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s, opacity 0.1s, top 0.6s;
+    z-index: 111;
+  }
+
+  .bar-top {
+    top: 30%;
+  }
+
+  .bar-mid {
+    display: none;
+  }
+
+  .bar-bottom {
+    top: 70%;
+  }
+
+  .hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+  }
+
+  .hamburger-menu.active .bar-mid {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    width: 100%;
+  }
+
+  /* The Overlay (background) */
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    display: block;
+    height: 100vh;
+    width: 0%;
+    font-size: 2rem;
+    position: fixed; /* Stay in place */
+    z-index: 111; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 0%); /* Black w/opacity */
+    background-color: var(--background-color);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden; /* Disable vertical scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+  /* mobile navigation */
+  #mobile-nav ul {
+    position: relative;
+    top: 20%;
+  }
+  #mobile-nav ul li a {
+    display: block;
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  #wrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .overlay {
+    height: 0%;
+    width: 100vw;
+  }
+
+  .avatar {
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+  }
+  .section {
+    margin: 4rem 0 4rem 0;
+  }
+  #bio-name {
+    text-align: center;
+  }
+  #desc .about-me {
+    width: 100%;
+  }
+  .socials {
+    margin: 1rem auto;
+  }
+  #bio {
+    margin: 100px auto 0;
+    height: 80vh;
+  }
+  .m-row-rev {
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+  }
+  #desc {
+    text-align: center;
+  }
+  #hire {
+    text-align: center;
+  }
+  #projects .card {
+    flex-direction: column;
+    width: 90%;
+    margin: 3rem auto;
+  }
+  #projects .card-desc {
+    /* width: 60%; */
+    text-align: center;
+    margin: 10px auto;
+  }
+  #projects .card-photo {
+    margin-bottom: 2rem;
+  }
+  #projects .card-photo img {
+    width: 100%;
+    height: auto;
+  }
+  #projects .about-me {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .tags {
+    margin: auto;
+  }
+
+}

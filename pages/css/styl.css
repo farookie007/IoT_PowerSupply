@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@font-face {
+font-family: 'Noway';
+src: url('./fonts/noway-regular-webfont.ttf');
+}
+
+:root {
+    --font-family: "Ubuntu"
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    border: 1px dotted red;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: 24px;
+}
+
+/* unsetting default behaviours */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    padding: 0;
+    text-decoration: none;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    width: fit-content;
+    height: auto;
+}
+
+/* setting generic styles for classes */
+.mobile {
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.code {
+    font-family: 'Courier New', Courier;
+}
+.name {
+    font-family: "Noway";
+}
+
+/* styles */
+#avatar {
+    border-radius: 50%;
+}
+header {
+    background-image: linear-gradient(to top right, rgb(243, 145, 145), hsl(307, 87%, 56%));
+}
