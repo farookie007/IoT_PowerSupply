@@ -25,3 +25,11 @@ hamMenu.addEventListener('click', () => {
         };
     };
 });
+
+// to close the hamburger menu if the user scrolls without closing it
+document.addEventListener('scroll', () => {
+        if (myNav.style.height > "0%" && myNav.style.width > "0%") {
+            hamMenu.classList.toggle('active');
+            wrapper.clientWidth > MOBILE_WIDTH ? myNav.style.width = "0%" : myNav.style.height = "0%";
+    }
+});

@@ -1,5 +1,4 @@
 :root {
-  --font-fam: "Quicksand", "Ubuntu";
   /* dark theme params */
   /* --background-color: hsl(204, 15%, 7%); */
   --background-color: #fefdfc;
@@ -9,7 +8,7 @@
   --font-color: hsl(204, 15%, 7%);
   /* --shade: hsl(204, 15%, 10%); */
   --shade: #efefef;
-  --btn-color: hsl(100, 80%, 51%);
-  --btn-hover: hsl(100, 80%, 46%);
+  --btn-color: hsl(114, 72%, 45%);
+  --btn-hover: hsl(114, 72%, 35%);
   /* light theme params */
 }
