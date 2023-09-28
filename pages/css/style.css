@@ -17,17 +17,6 @@
   src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 
-:root {
-  --font-fam: "Quicksand", "Ubuntu";
-  /* dark theme params */
-  --background-color: hsla(220, 26%, 10%, 1);
-  --link-color: hsla(204, 57%, 90%, 0.9);
-  --font-color: hsla(0, 0%, 100%, 1);
-  --shade: hsla(220, 26%, 13%, 1);
-  --btn-color: hsla(204, 57%, 30%, 0.9);
-  --btn-hover: hsla(204, 57%, 20%, 0.9);
-  /* light theme params */
-}
 /* :root {
   --font-fam: "Quicksand", "Ubuntu";
   --background-color: hsla(220, 26%, 7%, 1);
@@ -37,6 +26,7 @@
   --btn-color: hsla(204, 57%, 30%, 0.9);
   --btn-hover: hsla(204, 57%, 20%, 0.9);
 } */
+
 
 * {
   margin: 0;
@@ -121,8 +111,9 @@ hr {
   margin: 2.5rem 0;
   border-radius: 5px;
   padding: 1rem;
+  /* padding: 0; */
   background-color: var(--shade);
-  box-shadow: 0 2px 4px var(--shade);
+  /* box-shadow: 0 2px 4px var(--shade); */
 }
 .card-photo {
   height: fit-content;
@@ -290,6 +281,7 @@ hr {
   padding: 10px;
   text-align: center;
   border-radius: 25px;
+  /* background-color: hsla(30, 56%, 50%, 1); */
   border: 2px solid var(--btn-hover);
   transition: background-color 0.3s;
 }
@@ -371,7 +363,7 @@ button:focus {
     text-align: left;
   }
   #bio {
-    margin-top: 75px;
+    margin-top: 15rem;
     width: 100%;
     height: fit-content;
   }
@@ -549,6 +541,7 @@ button:focus {
     position: relative;
   }
   #bio {
+    margin-top: unset;
     position: relative;
     margin: 100px auto 0;
     min-height: 100vh;
