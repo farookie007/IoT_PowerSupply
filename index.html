@@ -10,11 +10,73 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <a href="" id="on-btn" class="button glow-button block">
-            <img src="./images/on-button-svgrepo-com.svg" alt="" class="btn-img">
-        </a>
+    <div id="mobile-nav" class="overlay mobile">
+        <!-- Overlay content -->
+        <ul>
+                    <!-- if conditionals to choose which of the menu options to display -->
+
+                    <li><a href="{% url 'user_auth:logout' %}"><button id="login" class="auth-btn btn">Logout</button></a></li>
+                    <li><a href="{% url 'results:upload' %}"><button id="signup" class="auth-btn btn">Upload</button></a></li>
+                    
+                    <!-- <li><a href="{% url 'user_auth:login' %}"><button id="login" class="auth-btn btn">Login</button></a></li>
+                    <li><a href="{% url 'accounts:register' %}"><button id="signup" class="auth-btn btn">Register</button></a>
+                    </li> -->
+                    
+        </ul>
     </div>
+    <div id="wrapper">
+
+        <header>
+            <div id="header-top" class="flex">
+                <li>
+                    <a href="{% url 'dashboard:dashboard' %}" id="logo">Dashboard</a>
+                    <!-- <a href="{% url 'user_auth:login' %}" id="logo">StuData</a> -->
+
+                </li>
+
+                <ul id="auth" class="flex desktop">
+                    <!-- if conditionals to choose which of the menu options to display -->
+
+<li><a href="{% url 'user_auth:logout' %}"><button id="login" class="auth-btn btn">Logout</button></a></li>
+<li><a href="{% url 'results:upload' %}"><button id="signup" class="auth-btn btn">Upload</button></a></li>
+
+<!-- <li><a href="{% url 'user_auth:login' %}"><button id="login" class="auth-btn btn">Login</button></a></li>
+<li><a href="{% url 'accounts:register' %}"><button id="signup" class="auth-btn btn">Register</button></a>
+</li> -->
+
+
+                </ul>
+                <div class="hamburger-menu">
+                    <div class="ham-bar bar-top"></div>
+                    <div class="ham-bar bar-mid"></div>
+                    <div class="ham-bar bar-bottom"></div>
+                </div>
+            </div>
+        </header>
+
+        <div id="top">
+            <a href="" id="on-btn" class="button glow-button block">
+                <img src="./images/on-button-svgrepo-com.svg" alt="" class="btn-img">
+            </a>
+        </div>
+        <div id="bottom">
+            <table>
+                <tr>
+                    <td class="txt-left">% Load</td>
+                    <td class="txt-right">80%</td>
+                </tr>
+                <tr>
+                    <td class="txt-left">Wattage</td>
+                    <td class="txt-right">300W</td>
+                </tr>
+                <tr>
+                    <td class="txt-left">Running Time</td>
+                    <td class="txt-right">4hrs</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

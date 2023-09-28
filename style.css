@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-  --light-green: rgb(72, 246, 72);
-  --light-theme-color: hsl(20, 100%, 98%);
-  --regular-theme-color: hsl(20, 70%, 53%);
+  --light-green: hsl(120, 91%, 62%);
+  --light-theme-color: hsl(120, 100%, 98%);
+  --regular-theme-color: hsl(120, 30%, 53%);
   /* --bg-color: #fff; */
-  --bg-color: hsl(20, 100%, 99%);
+  --bg-color: hsl(120, 100%, 99%);
 
   /* --bg-color: #f0f0f0; */
   --greyy: hsla(0, 0%, 50%, 1);
@@ -13,11 +13,12 @@
   --font-color: #333;
   --font-fam: "Quicksand", Calibri;
 }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  /* border: 1px dotted red; */
 }
 
 /* native tags styling */
@@ -61,7 +62,7 @@ input {
   box-sizing: border-box;
 }
 input:focus {
-  outline-color: hsl(20, 96%, 81%);
+  outline-color: hsl(120, 96%, 81%);
 }
 
 a:focus,
@@ -69,6 +70,24 @@ button:focus {
   outline-color: hsl(0, 0%, 51%);
 }
 
+div#top {
+  position: relative;
+  height: 30vh;
+  background-color: hsl(120, 100%,95%);
+}
+div#bottom {
+  margin-top: 5rem;
+}
+table {
+  width: 80%;
+  margin: auto;
+  border-spacing: 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+td {
+  padding: 0.5rem 3rem;
+}
 a {
   padding: 0;
   margin: 0;
@@ -81,7 +100,6 @@ a {
 }
 .alert {
   font-size: 0.8rem;
-  line-height: 1rem;
   color: black;
   font-weight: 500;
   width: 100%;
@@ -118,8 +136,17 @@ li {
 }
 
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   position: relative;
+  background-color: var(--light-theme-color);
+}
+#header-top {
+  padding: 0rem 5rem;
+  line-height: 3rem;
+  box-shadow: 0 2px 15px 0 hsla(0, 0%, 50%, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -149,7 +176,13 @@ header {
   height: 80px;
   text-decoration: none;
   transition: all 1s ease-in-out;
-  background-color: #ddd;
+  background-color: #fff;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-left {
+  text-align: left;
 }
 
 #on-btn:hover,
@@ -162,8 +195,8 @@ header {
 
 #on-btn {
   transform: translate(-50%, -50%);
-  position: relative;
-  top: 30%;
+  position: absolute;
+  top: 50%;
   left: 50%;
 }
 
@@ -186,7 +219,17 @@ header {
   width: auto;
   opacity: 0.7;
 }
-
+#logo {
+  display: inline-block;
+  height: 100%;
+  width: fit-content;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+#auth #login {
+  background-color: var(--bg-color);
+  color: var(--regular-theme-color);
+}
 #no-show,
 .no-show {
   display: none;
@@ -210,12 +253,35 @@ header {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: hsl(20, 73%, 47%);
+  background-color: hsl(120, 30%, 47%);
 }
 
 .foot {
   text-align: center;
 }
+.overlay {
+  display: none;
+}
+
+#auth #login {
+  background-color: var(--bg-color);
+  color: var(--regular-theme-color);
+}
+.auth-btn {
+  width: 6.625rem;
+  height: 2.0833333333333335rem;
+  font-size: 0.8333333333333334rem;
+}
+.hamburger-menu {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 /* Mobile View */
 @media screen and (max-width: 480px) {
@@ -224,7 +290,10 @@ header {
     border: 0;
     box-sizing: 0;
   }
-
+  .desktop {
+    /* to set display of desktop parameters to none for mobile */
+    display: none;
+  }
   html {
     font-size: 3.4vw; /* This will make the font-size to be 16px when the viewport width is 375px */
   }
@@ -237,4 +306,134 @@ header {
   .container {
     width: 90%;
   }
+  #header-top {
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    height: fit-content;
+    line-height: 2.5rem;
+    position: relative;
+  }
+  #logo {
+    margin: auto 0;
+    font-size: 1.6rem;
+    height: 100%;
+  }
+  #on-btn,
+  .btn-img {
+    height: 4rem;
+    width: 4rem;
+  }
+  #on-btn {
+    left: 85%;
+    top: 100%;
+  }
+  #mobile-nav ul {
+    position: relative;
+    top: 20%;
+  }
+  #mobile-nav ul li a {
+    display: block;
+    width: 80%;
+    margin: 2rem auto;
+  }
+    /* The Overlay (background) */
+    .overlay {
+      /* Height & width depends on how you want to reveal the overlay (see JS below) */
+      display: block;
+      height: 0%;
+      width: 100%;
+      position: fixed; /* Stay in place */
+      z-index: 11; /* Sit on top */
+      left: 0;
+      top: 0;
+      background-color: rgb(0, 0, 0); /* Black fallback color */
+      background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+      overflow-x: hidden; /* Disable horizontal scroll */
+      overflow-y: hidden; /* Disable vertical scroll */
+      transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+  
+    /* Position the content inside the overlay */
+    .overlay-content {
+      position: relative;
+      top: 25%; /* 25% from the top */
+      width: 100%; /* 100% width */
+      text-align: center; /* Centered text/links */
+      margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+  
+    /* The navigation links inside the overlay */
+    .auth-btn {
+      transition: 0.3s; /* Transition effects on hover (color) */
+      display: block; /* Display block instead of inline */
+      color: #f0ebeb;
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(45, 45, 45, 1);
+      font-size: 1rem;
+    }
+  
+    .auth-btn:hover,
+    .auth-btn:active {
+      background-color: #2185d0;
+      background-color: rgb(80, 80, 80);
+      transition: background-color 0.3s;
+    }
+    .desktop {
+      /* to set display of desktop parameters to none for mobile */
+      display: none;
+    }
+  
+    /* hamburger menu */
+    .hamburger-menu {
+      margin: auto 0;
+      display: block;
+      height: 100%;
+      width: 2rem;
+      position: relative;
+      cursor: pointer;
+      padding: 1rem;
+      z-index: 111;
+    }
+  
+    .ham-bar {
+      width: 100%;
+      height: 2px;
+      background-color: var(--font-color);
+      background-color: var(--regular-theme-color);
+      border-radius: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s, opacity 0.1s, top 0.6s;
+      z-index: 111;
+    }
+  
+    .bar-top {
+      top: 30%;
+    }
+  
+    .bar-mid {
+      display: none;
+    }
+  
+    .bar-bottom {
+      top: 70%;
+    }
+  
+    .hamburger-menu.active .bar-top {
+      transform: translate(-50%, -50%) rotate(-45deg);
+      top: 50%;
+    }
+  
+    .hamburger-menu.active .bar-mid {
+      opacity: 0;
+    }
+  
+    .hamburger-menu.active .bar-bottom {
+      transform: translate(-50%, -50%) rotate(45deg);
+      top: 50%;
+    }
+  
 }
