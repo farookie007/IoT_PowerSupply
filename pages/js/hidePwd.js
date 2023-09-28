@@ -1,17 +1,13 @@
-const hidePwds = document.querySelectorAll('.hide-pwd')
+var themeSwitch = document.getElementById('theme-switch')
+const theme = document.getElementById('theme')
+
+// Hide/Show theme switch button
+themeSwitch.addEventListener('click', () => {
+    themeSwitch.children[0].classList.toggle('no-show');
+    themeSwitch.children[1].classList.toggle('no-show');
+
+    theme.href.includes('dark') ? theme.setAttribute('href', theme.href.replace('dark', 'light')) : theme.setAttribute('href', theme.href.replace('light', 'dark'));
+
+})
 
 
-// Hide/Show password button
-hidePwds.forEach((icon) => {
-    icon.addEventListener('click', () => {
-        inputTag = icon.previousElementSibling;
-        imgs = icon.children;
-        if (inputTag.type === "text") {
-            inputTag.type = "password";
-        } else {
-            inputTag.type = "text";
-        };
-        imgs[0].classList.toggle('no-show');
-        imgs[1].classList.toggle('no-show');
-    });
-});

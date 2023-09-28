@@ -192,8 +192,15 @@ hr {
   text-transform: uppercase;
   font-weight: 600;
 }
+#theme-switch img {
+  width: 30px;
+  height: auto;
+}
 
 /* class */
+.no-show {
+  display: none;
+}
 .flex {
   display: flex;
   justify-content: space-between;
@@ -433,7 +440,7 @@ button:focus {
     height: 100%;
     width: 1.5rem;
     position: relative;
-    left: 93%;
+    /* left: 0%; */
     cursor: pointer;
     padding: 1rem;
     z-index: 111;
@@ -544,7 +551,7 @@ button:focus {
     margin-top: unset;
     position: relative;
     margin: 100px auto 0;
-    min-height: 100vh;
+    min-height: 70vh;
     top: 50%;
   }
 
