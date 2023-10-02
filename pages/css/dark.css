@@ -7,5 +7,10 @@
   --shade: hsl(204, 15%, 10%);
   --btn-color: hsl(204, 70%, 45%);
   --btn-hover: hsl(204, 70%, 35%);
+  --input-bg: #121212;
   /* light theme params */
+}
+
+.light {
+  display: none;
 }

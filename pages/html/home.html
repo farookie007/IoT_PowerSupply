@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="theme" rel="stylesheet" href="../css/light.css">
-    <!-- <link id="theme" rel="stylesheet" href="../css/dark.css"> -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link id="theme" rel="stylesheet" href="../css/theme.css">
+    <link id="style" rel="stylesheet" href="../css/style.css">
     <title>Home</title>
 </head>
 
 <body>
+    <script>
+        var theme = document.getElementById('theme')
+        theme.setAttribute('href', theme.href.replace('theme', localStorage.getItem('theme')));
+    </script>
+
     <div id="wrapper">
         <!-- Mobile Navigation Menu -->
         <div id="mobile-nav" class="overlay mobile">
@@ -88,7 +92,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div id="hire" class="txt-center">
                     <a href="#contacts" id="hire-me">Hire Me</a>
@@ -201,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="card flex">
                         <div class="card-photo relative">
                             <div class="layover">
@@ -314,8 +318,8 @@
             </div>
         </footer>
     </div>
+    <script src="../js/themeScript.js"></script>
     <script src="../js/hamburgerMenu.js"></script>
-    <script src="../js/hidePwd.js"></script>
 </body>
 
 </html>

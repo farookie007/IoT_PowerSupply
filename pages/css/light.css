@@ -8,7 +8,12 @@
   --font-color: hsl(204, 15%, 7%);
   /* --shade: hsl(204, 15%, 10%); */
   --shade: #efefef;
-  --btn-color: hsl(114, 72%, 45%);
-  --btn-hover: hsl(114, 72%, 35%);
+  --btn-color: hsl(114, 82%, 55%);
+  --btn-hover: hsl(114, 82%, 45%);
+  --input-bg: #fff;
   /* light theme params */
+}
+
+.dark {
+  display: none;
 }
